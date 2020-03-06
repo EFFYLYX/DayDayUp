@@ -1,0 +1,5 @@
+div 有bug
+异常名字：ArithmeticException
+异常原因：/ by zero
+---------------
+number of bugs:1

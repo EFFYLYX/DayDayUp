@@ -1,4 +1,7 @@
 package annotation;
 
-public class MyEnum {
+public enum  MyEnum {
+    CLASS,
+    METHOD,
+    FIELD
 }
