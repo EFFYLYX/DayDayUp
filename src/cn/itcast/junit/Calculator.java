@@ -24,7 +24,7 @@ public class Calculator {
         System.out.println(1/0);
     }
 
-    @Check
+    @Check 
     public void show(){
         System.out.println("no bug");
     }

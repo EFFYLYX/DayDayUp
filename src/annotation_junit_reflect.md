@@ -92,24 +92,24 @@ new Person()
     
     属性：在接口中可以定义抽象方法
         - 属性的返回值类型
-            * 基本数据类型
-            * String
-            * 枚举
-            * 注解
-            * 以上类型的数组
+            - 基本数据类型
+            - String
+            - 枚举
+            - 注解
+            - 以上类型的数组
         - 定义了属性，使用注解时，需要赋值
             1. 使用default关键字给属性默认初始化值，则使用注解时，可以不进行属性赋值
             2. 如果只有一个属性需要赋值，并且属性的名称是value，则value可以忽略，直接定义值即可
             3. 数组赋值时，值可以用{}包裹，如果数组中只有一个值，则{}可以省略
     
 元注解：用于描述注解的注解
-    * @Target：描述注解能够作用的位置
-        * ElementType.TYPE 类
-        * ElementType.METHOD
-        * ElementType.FIELD
-    * @Retention:描述注解被保留的阶段
-    * @Document：描述注解是否被抽取到api文档中
-    * @Inherited：描述注解是否被子类继承, 有了这个标注，修饰的父类的注解 会被子类继承
+    - @Target：描述注解能够作用的位置
+        - ElementType.TYPE 类
+        - ElementType.METHOD
+        - ElementType.FIELD
+    - @Retention:描述注解被保留的阶段
+    - @Document：描述注解是否被抽取到api文档中
+    - @Inherited：描述注解是否被子类继承, 有了这个标注，修饰的父类的注解 会被子类继承
  
  
  ### 小结
