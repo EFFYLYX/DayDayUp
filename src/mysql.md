@@ -151,3 +151,39 @@ mysql -u root -p
         * where在分组之前限定，如果不满足条件，不参与分组
         * having在分组之后进行限定，如果不满足条件，则不会被select出来
         * where后不可以跟聚合函数， having后可以进行聚合函数的判断
+5. 分页
+    * SELECT * FROM table LIMIT 0,3 -- first page
+    * SELECT * FROM table LIMIT 3,3 -- second page
+    * 开始的索引 = （当前页码 - 1） * 每页显示的条数
+    
+## 约束
+1. 主键约束， primary key
+    * 一个表只能有一个逐渐，逐渐是表记录的唯一标识
+    * 删除主键：ALTER TABLE table_name DROP PRIMARY KEY
+    * 添加主键：ALTER TABLE table_name MODIFY id INT PRIMARY KEY
+    * 自动增长：
+        * CREATE TABLE table_name{id INT PRIMARY KEY AUTO_INCREMENT, other_columns);
+2. 非空约束：not null
+    * CREATE TABLE table_name(id INT, name VARCHAR(20) NOT NULL)
+        * name 为非空
+3. 唯一约束：unique
+   * CREATE TABLE table_name(id INT, phone VARCHAR(20) UNIQUE)
+4. 外键约束：foreign key
+    * CREATE TABLE table_name .... column_name CONSTRAINT foreign_column_name FOREIGN KEY (column_name) REFERENCES foreign_table_Name(primary_key_name))
+    * ALTER TABLE table_name DROP FOREIGN KEY foreign_key_name
+    * ALTER TABLE table_name ADD CONSTRAINT foreign_column_name FOREIGN KEY (column_name) REFERENCES foreign_table_Name(primary_key_name))
+    
+    * 级联操作
+        * ON UPDATE CASCADE ON DELETE CASCADE
+        * 级联更新 ON UPDATE CASCADE
+        * 级联删除 ON DELETE CASCADE
+            * 跟这条记录相关的所有记录(包括其他表）都删除了
+
+## 数据库设计
+1. 多表关系
+    1. 一对一
+        * yi个人
+    2. 一对多、多对一
+    3. 多堆垛
+    
+    
