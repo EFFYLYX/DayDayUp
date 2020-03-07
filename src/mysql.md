@@ -145,3 +145,9 @@ mysql -u root -p
     * min
     * sum
     * avg
+4. 分组查询
+    * SELECT column_name_group, 聚合函数 FROM table_name [WHERE] GROUP BY clumn_name_group [HAVING]
+    * where 和 having 的差别
+        * where在分组之前限定，如果不满足条件，不参与分组
+        * having在分组之后进行限定，如果不满足条件，则不会被select出来
+        * where后不可以跟聚合函数， having后可以进行聚合函数的判断
